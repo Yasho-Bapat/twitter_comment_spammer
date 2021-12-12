@@ -8,7 +8,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 user = input("enter user: ")
 comment = input("enter comment phrase: ")
 
-target_tweets = api.user_timeline(screen_name = user, count = 50)
+target_tweets = api.user_timeline(screen_name = user, count = 2, include_rts = false)
 
 for tweet in target_tweets:
     print(tweet.text)
